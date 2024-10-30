@@ -5,14 +5,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="product")
 @Data
@@ -57,10 +57,4 @@ public class Product {
     @UpdateTimestamp
     private Date lastUpdated;
 
-    public Product(Long id) {
-        this.id = id;
-    }
-
-    public Product() {
-    }
 }
